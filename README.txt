@@ -1,4 +1,4 @@
-# LabTest - مشروع تعليمي لاختبار البرمجيات
+# Lab Test
 
 هذا المستودع عام ويهدف إلى التعلم والتدرب على كتابة الاختبارات (Unit Tests و Integration Tests) في مشروع ASP.NET Core Minimal API.
 
