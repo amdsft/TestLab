@@ -1,65 +1,60 @@
-# Lab Test
+# LabTest - Educational Software Testing Project
 
-هذا المستودع عام ويهدف إلى التعلم والتدرب على كتابة الاختبارات (Unit Tests و Integration Tests) في مشروع ASP.NET Core Minimal API.
+This public repository is intended to help you learn and practice writing tests (Unit Tests and Integration Tests) in an ASP.NET Core Minimal API project.
 
-## المتطلبات
+## Requirements
 
 - [.NET 9 SDK](https://dotnet.microsoft.com/download/dotnet/9.0)
 - Git
-- محرر نصوص مثل Visual Studio Code أو Visual Studio 2022
+- A code editor such as Visual Studio Code or Visual Studio 2022
 
-## طريقة تثبيت المشروع
+## Installation
 
-1. **استنساخ المستودع:**
+### 1. Clone the Repository
 
-   افتح الطرفية (Terminal) ونفّذ الأمر التالي:
+Open your terminal and execute the following commands:
+
 ```
    git clone https://github.com/username/LabTest.git
    cd LabTest
 ```
-استعادة الحزم وبناء المشروع:
-
-نفّذ الأمر التالي من جذر المستودع:
+### 2. Restore Packages and Build the Project
+Run the following commands from the repository's root:
 
 ```
-Copy
 dotnet restore
 dotnet build
 ```
-تشغيل المشروع
-لتشغيل المشروع، استخدم الأمر التالي:
+### 3. Run the Project
+To run the project, execute:
 
 ```
-Copy
 dotnet run --project LabTest
 ```
-بعد تشغيل التطبيق، ستظهر رسالة في الطرفية تحتوي على عنوان URL (مثلاً: https://localhost:5001). يمكنك فتح هذا العنوان في المتصفح لاستعراض الـ API.
+After starting the application, a URL (for example, https://localhost:5001) will be displayed in the terminal. Open this URL in your browser to view the API.
 
-تشغيل الاختبارات
-المشروع يحتوي على قسمين للاختبارات:
+## Running Tests
+The project contains two sets of tests:
 
-LabTest.Unit.Tests: يحتوي على اختبارات الوحدة (Unit Tests) التي تختبر منطق العمل (Business Logic) بشكل منفصل.
-LabTest.IntegrationTests: يحتوي على اختبارات التكامل (Integration Tests) التي تختبر نقاط النهاية (Endpoints) باستخدام خادم اختبار في الذاكرة.
-لتشغيل جميع الاختبارات، نفّذ الأمر التالي من جذر المستودع:
+LabTest.Unit.Tests: Contains unit tests that verify the business logic separately.
+LabTest.IntegrationTests: Contains integration tests that check the endpoints using an in-memory test server.
+To run all tests, execute the following command from the repository's root:
 
 ```
-Copy
 dotnet test
 ```
-سيقوم هذا الأمر ببناء المشاريع وتشغيل جميع الاختبارات وعرض النتائج في الطرفية.
+This command will build the projects, run all tests, and display the results in the terminal.
 
-بنية المشروع
-LabTest/: يحتوي على كود الـ API الأساسي.
-LabTest.Unit.Tests/: يحتوي على اختبارات الوحدة.
-LabTest.IntegrationTests/: يحتوي على اختبارات التكامل.
-المساهمة
-إذا كان لديك أفكار أو تحسينات ترغب في إضافتها:
+## Project Structure
+LabTest/: Contains the main API code.
+LabTest.Unit.Tests/: Contains the unit tests.
+LabTest.IntegrationTests/: Contains the integration tests.
 
-افتح Issue لمناقشة الفكرة.
-يمكنك إرسال Pull Request لتقديم التعديلات.
-الترخيص
-هذا المشروع مرخص بموجب MIT License.
+## Contributing
+If you have any ideas or improvements:
 
-ملحوظة:
-هذا المشروع لأغراض تعليمية فقط.
+Open an Issue to discuss your idea.
+Alternatively, you can submit a Pull Request with your changes.
 
+## License
+This project is licensed under the MIT License.
