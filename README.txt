@@ -1,42 +1,60 @@
-# Microservices Udemy Course repository (2024 version)
+# LabTest - Educational Software Testing Project
 
-The original 2023 version is available [here](https://github.com/TryCatchLearn/carsties)
+This public repository is intended to help you learn and practice writing tests (Unit Tests and Integration Tests) in an ASP.NET Core Minimal API project.
 
-This is the repository for the Microservices 'Carsties' app created for the Udemy course updated in August 2024
+## Requirements
 
-You can see how this app was made by checking out the Udemy course for this [here](https://www.udemy.com/course/build-a-microservices-app-with-dotnet-and-nextjs-from-scratch/?couponCode=NEWCOURSEPROM) (with discount)
+- [.NET 9 SDK](https://dotnet.microsoft.com/download/dotnet/9.0)
+- Git
+- A code editor such as Visual Studio Code or Visual Studio 2022
 
-You can run this app locally on your computer by following these instructions:
+## Installation
 
-1. Using your terminal or command prompt clone the repo onto your machine in a user folder 
+### 1. Clone the Repository
+
+Open your terminal and execute the following commands:
 
 ```
-git clone https://github.com/TryCatchLearn/Carsties-2024.git
+   git clone https://github.com/username/LabTest.git
+   cd LabTest
 ```
-2. Change into the Carsties directory
+### 2. Restore Packages and Build the Project
+Run the following commands from the repository's root:
+
 ```
-cd Carsties
+dotnet restore
+dotnet build
 ```
-3. Ensure you have Docker Desktop installed on your machine.  If not download and install from Docker and review their installation instructions for your Operating system [here](https://docs.docker.com/desktop/).
-4. Build the services locally on your computer by running (NOTE: this may take several minutes to complete):
+### 3. Run the Project
+To run the project, execute:
+
 ```
-docker compose build
+dotnet run --project LabTest
 ```
-5. Once this completes you can use the following to run the services:
+After starting the application, a URL (for example, https://localhost:5001) will be displayed in the terminal. Open this URL in your browser to view the API.
+
+## Running Tests
+The project contains two sets of tests:
+
+LabTest.Unit.Tests: Contains unit tests that verify the business logic separately.
+LabTest.IntegrationTests: Contains integration tests that check the endpoints using an in-memory test server.
+To run all tests, execute the following command from the repository's root:
+
 ```
-docker compose up -d
+dotnet test
 ```
-6. To see the app working you will need to provide it with an SSL certificate.   To do this please install 'mkcert' onto your computer which you can get from [here](https://github.com/FiloSottile/mkcert).  Once you have this you will need to install the local Certificate Authority by using:
-```
-mkcert -install
-```
-7. You will then need to create the certificate and key file on your computer to replace the certificates that I used.   You will need to change into the 'devcerts' directory and then run the following command:
-```
-cd devcerts
-mkcert -key-file carsties.local.key -cert-file carsties.local.crt app.carsties.local api.carsties.local id.carsties.local
-```
-8.  You will also need to create an entry in your host file so you can reach the app by its domain name.   Please use this [guide](https://www.hostinger.com/tutorials/how-to-edit-hosts-file) if you do not know how to do this.  Create the following entry:
-```
-127.0.0.1 id.carsties.local app.carsties.local api.carsties.local
-```
-9. You should now be able to browse to the app on https://app.carsties.local
+This command will build the projects, run all tests, and display the results in the terminal.
+
+## Project Structure
+LabTest/: Contains the main API code.
+LabTest.Unit.Tests/: Contains the unit tests.
+LabTest.IntegrationTests/: Contains the integration tests.
+
+## Contributing
+If you have any ideas or improvements:
+
+Open an Issue to discuss your idea.
+Alternatively, you can submit a Pull Request with your changes.
+
+## License
+This project is licensed under the MIT License.
