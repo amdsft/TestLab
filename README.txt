@@ -13,23 +13,26 @@
 1. **استنساخ المستودع:**
 
    افتح الطرفية (Terminal) ونفّذ الأمر التالي:
-   ```bash
+```
    git clone https://github.com/username/LabTest.git
    cd LabTest
+```
 استعادة الحزم وبناء المشروع:
 
 نفّذ الأمر التالي من جذر المستودع:
 
-bash
+```
 Copy
 dotnet restore
 dotnet build
+```
 تشغيل المشروع
 لتشغيل المشروع، استخدم الأمر التالي:
 
-bash
+```
 Copy
 dotnet run --project LabTest
+```
 بعد تشغيل التطبيق، ستظهر رسالة في الطرفية تحتوي على عنوان URL (مثلاً: https://localhost:5001). يمكنك فتح هذا العنوان في المتصفح لاستعراض الـ API.
 
 تشغيل الاختبارات
@@ -39,9 +42,10 @@ LabTest.Unit.Tests: يحتوي على اختبارات الوحدة (Unit Tests)
 LabTest.IntegrationTests: يحتوي على اختبارات التكامل (Integration Tests) التي تختبر نقاط النهاية (Endpoints) باستخدام خادم اختبار في الذاكرة.
 لتشغيل جميع الاختبارات، نفّذ الأمر التالي من جذر المستودع:
 
-bash
+```
 Copy
 dotnet test
+```
 سيقوم هذا الأمر ببناء المشاريع وتشغيل جميع الاختبارات وعرض النتائج في الطرفية.
 
 بنية المشروع
@@ -59,4 +63,3 @@ LabTest.IntegrationTests/: يحتوي على اختبارات التكامل.
 ملحوظة:
 هذا المشروع لأغراض تعليمية فقط.
 
-order this to make it nice for github readme
